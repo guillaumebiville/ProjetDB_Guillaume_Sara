@@ -147,6 +147,13 @@ une équipe peut participer à plusieurs match
 <img width="1124" height="1070" alt="image" src="https://github.com/user-attachments/assets/2847bf59-170f-4df8-8edb-42d8bddb4679" />
 
 
+Après certains rajouts et modifications du MCD, voici le MLD obtenu à partir du nouveau MCD :
+
+https://cdn.discordapp.com/attachments/1476512064578261052/1481958064998580274/image.png?ex=69b53480&is=69b3e300&hm=2569f6c6d3ee467058613f68495dec8cc087d266db71e54fc91f47989538ffa6&
+
+
+
+
 
 
 
