@@ -229,7 +229,20 @@ Les clés étrangères doivent faire référence aux clés primaires existantes 
 Fournis l’ensemble sous la forme d’un script SQL prêt à être exécuté.
 
 
+Concernant le scénario d'utilisation pour la BD nous avons opté pour ce scénario : 
 
+La base de données est utilisée par un directeur sportif d’un club de football professionnel qui utiliserait les informations de la base de données concernant certains joueurs, équipes, clubs...., afin de se préparer pour le prochain mercato, période durant laquelle des transferts de joueurs entre club pourront se faire.
+Son rôle est de consulter les informations principales sur les joueurs, les contrats, les équipes, les matchs, les compétitions et les compositions d’équipe.
+
+Cette base peut lui servir par exemple à :
+- voir la liste des joueurs du club et certaines de leurs caractéristiques ;
+- consulter les contrats en cours ou arrivant bientôt à échéance ;
+- regarder les matchs joués dans une compétition ou dans un stade donné ;
+- analyser quelques statistiques simples sur les joueurs, les matchs et les compétitions ;
+- savoir quels joueurs ont participé à quels matchs et avec quel statut.
+….
+
+Les requêtes SQL réalisées dans la suite du projet ont donc pour objectif d’aider ce responsable sportif à extraire des informations utiles à partir de la base.
 
 
 
