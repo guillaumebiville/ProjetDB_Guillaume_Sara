@@ -8,3 +8,6 @@ FROM JOUEUR
 WHERE nationalite = 'Française'
 ORDER BY nom_joueur;
 
+-- requete pour afficher les nationalités différentes présentes dans la table JOUEUR
+SELECT DISTINCT nationalite
+FROM JOUEUR;
