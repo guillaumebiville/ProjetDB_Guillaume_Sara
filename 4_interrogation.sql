@@ -66,3 +66,48 @@ SELECT p.id_match, p.phase_competition, s.nom_stade
 FROM PARTIE p
 JOIN STADE s ON p.id_stade = s.id_stade;
 
+
+-- afficher les joueurs qui ont un contrat
+SELECT nom_joueur
+FROM JOUEUR
+WHERE id_joueur IN (
+    SELECT id_joueur
+    FROM CONTRAT
+);
+
+-- afficher les joueurs qui n'ont pas de contrat
+SELECT nom_joueur
+FROM JOUEUR
+WHERE id_joueur NOT IN (
+    SELECT id_joueur
+    FROM CONTRAT
+);
+
+
+-- afficher les joueurs qui ont une valeur marchande superieure a la moyenne des joueurs
+SELECT nom_joueur, valeur_marchande
+FROM JOUEUR
+WHERE valeur_marchande > (
+    SELECT AVG(valeur_marchande)
+    FROM JOUEUR
+);
+
+-- afficher les joueurs qui n'ont participe a aucun match
+SELECT nom_joueur
+FROM JOUEUR
+WHERE id_joueur NOT IN (
+    SELECT id_joueur
+    FROM COMPOSE
+);
+
+-- afficher les matchs joues dans un stade de capacite superieure a 40000
+SELECT id_match, phase_competition
+FROM PARTIE
+WHERE id_stade IN (
+    SELECT id_stade
+    FROM STADE
+    WHERE capacite > 40000
+);
+
+
+
