@@ -11,3 +11,9 @@ ORDER BY nom_joueur;
 -- requete pour afficher les nationalités différentes présentes dans la table JOUEUR
 SELECT DISTINCT nationalite
 FROM JOUEUR;
+
+-- afficher les postes ayant plus de 3 joueurs
+SELECT poste, COUNT(*) AS nombre_joueurs
+FROM JOUEUR
+GROUP BY poste
+HAVING COUNT(*) > 3;
