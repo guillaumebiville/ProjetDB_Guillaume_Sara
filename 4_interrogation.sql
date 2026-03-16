@@ -61,7 +61,7 @@ SELECT j.nom_joueur, cp.id_match, cp.statut_joueur_match
 FROM COMPOSE cp
 JOIN JOUEUR j ON cp.id_joueur = j.id_joueur;
 
-- afficher les matchs avec le nom du stade
+-- afficher les matchs avec le nom du stade
 SELECT p.id_match, p.phase_competition, s.nom_stade
 FROM PARTIE p
 JOIN STADE s ON p.id_stade = s.id_stade;
