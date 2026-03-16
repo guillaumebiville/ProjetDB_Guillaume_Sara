@@ -17,3 +17,8 @@ SELECT poste, COUNT(*) AS nombre_joueurs
 FROM JOUEUR
 GROUP BY poste
 HAVING COUNT(*) > 3;
+
+-- calculer la moyenne de la valeur marchande par poste
+SELECT poste, AVG(valeur_marchande) AS moyenne_valeur
+FROM JOUEUR
+GROUP BY poste;
