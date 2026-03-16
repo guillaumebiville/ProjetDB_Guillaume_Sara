@@ -163,6 +163,72 @@ Compose = (#_id_joueur, #_id_equipe, #_id_match, statut_joueur_match VARCHAR(20)
 
 
 
+Quatrième étape : insertion des données
+
+Voici le prompt utilisé, inspiré du prompt utilisé lors du TP1 : 
+
+"Donne les requêtes d’insertion permettant de remplir la base de données dont le modèle relationnel est le suivant :
+
+JOUEUR(id_joueur, nom_joueur, date_naissance, nationalite, poste, valeur_marchande)
+Clé primaire : id_joueur
+
+CLUB(id_club, nom_club, ville_club, pays_club)
+Clé primaire : id_club
+
+SAISON(id_saison, nom_saison, date_debut_saison, date_fin_saison)
+Clé primaire : id_saison
+
+STADE(id_stade, nom_stade, ville_stade, capacite)
+Clé primaire : id_stade
+
+EQUIPE(id_equipe, categorie_niveau, #id_club)
+Clé primaire : id_equipe
+
+COMPETITION(id_identifiant, nom_competition, type_competition, #id_saison)
+Clé primaire : id_identifiant
+
+PARTIE(id_match, date_heure_coup_envoi, score_eq_domicile, score_eq_exterieur, phase_competition, #id_identifiant, #id_stade)
+Clé primaire : id_match
+
+CONTRAT(id_contrat, date_debut_contrat, date_fin_contrat, statut_contrat, #id_joueur)
+Clé primaire : id_contrat
+
+COMPOSE(#id_joueur, #id_equipe, #id_match, statut_joueur_match, tactique)
+Clé primaire composé : (id_joueur, id_equipe, id_match)
+
+Les clés primaires correspondent aux id, sauf si autre chose est précisé. Les clés étrangères sont identifiées par les #, et ont le même nom que les clés primaires auxquelles elles font référence.
+
+Je souhaite les volumes de données suivants :
+- JOUEUR : 22 lignes
+- CLUB : 5 lignes
+- SAISON : 2 lignes
+- STADE : 4 lignes
+- EQUIPE : 7 lignes
+- COMPETITION : 5 lignes
+- PARTIE : 10 lignes
+- CONTRAT : 15 lignes
+- COMPOSE : 40 lignes
+
+les données doivent être cohérente avec le domaine de la gestion d’un club de football professionnel.
+Utiliser des noms réalistes de clubs, de stades et compétitions et joueurs.
+Utiliser des saisons du type 2024/2025 et 2025/2026 par exemple.
+Les statuts de contrat doivent être uniquement parmis : 'sous contrat', 'pret', 'libre'.
+Les statuts de joueur dans un match doivent être uniquement parmi : 'titulaire', 'remplacant', 'non_inscrit'.
+Les tactiques peuvent être par exemple : '4-3-3', '4-4-2', '3-5-2'.
+
+Respecter les contraintes suivantes :
+- valeur_marchande >= 0
+- capacite > 0
+- score_eq_domicile >= 0
+- score_eq_exterieur >= 0
+- date_fin_contrat > date_debut_contrat
+- les clés étrangères doivent toujours faire référence à des clés primaires existantes
+
+Les clés étrangères doivent faire référence aux clés primaires existantes : donne les lignes en commençant par remplir les tables dans lesquelles il n'y a pas de clés étrangères, puis les tables dans lesquelles les clés étrangères font référence à des clés primaires des tables déjà remplies.
+
+Fournis l’ensemble sous la forme d’un script SQL prêt à être exécuté.
+
+
 
 
 
