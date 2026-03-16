@@ -147,9 +147,24 @@ une équipe peut participer à plusieurs match
 <img width="1124" height="1070" alt="image" src="https://github.com/user-attachments/assets/2847bf59-170f-4df8-8edb-42d8bddb4679" />
 
 
-Après certains rajouts et modifications du MCD, voici le MLD obtenu à partir du nouveau MCD :
+voici le MLD obtenu à partir du nouveau MCD :
 
-https://cdn.discordapp.com/attachments/1476512064578261052/1481958064998580274/image.png?ex=69b53480&is=69b3e300&hm=2569f6c6d3ee467058613f68495dec8cc087d266db71e54fc91f47989538ffa6&
+Joueur = (_id_joueur INT, nom_joueur VARCHAR(80), date_naissance DATE, nationalité VARCHAR(40), poste VARCHAR(30), valeur_marchande DECIMAL(12,2));
+Saison = (_id_saison INT, nom_saison VARCHAR(10), date_debut_saison DATE, date_fin_saison DATE);
+Club = (_id_club INT, nom_club VARCHAR(80), ville_club VARCHAR(50), pays_club VARCHAR(40));
+Equipe = (_id_equipe INT, categorie_niveau VARCHAR(15), #_id_club);
+Compétition = (_id_identifiant INT, nom_compétition VARCHAR(60), type_compétition VARCHAR(20), #_id_saison);
+Stade = (_id_stade INT, nom_stade VARCHAR(80), ville_stade VARCHAR(50), capacité INT);
+Partie = (_id_match INT, date_heure_coup_envoi DATETIME, score_eq_domicile INT, score_eq_exterieur INT, phase_competition VARCHAR(30), #_id_identifiant, #_id_stade);
+Contrat = (_id_contrat INT, date_debut_contrat DATE, date_fin_contrat DATE, statut_contrat VARCHAR(20), #_id_joueur);
+Compose = (#_id_joueur, #_id_equipe, #_id_match, statut_joueur_match VARCHAR(20), tactique VARCHAR(10));
+
+<img width="2553" height="1212" alt="image" src="https://github.com/user-attachments/assets/f1ff2611-c335-4492-8ad3-1184cd62a454" />
+
+
+
+
+
 
 
 
