@@ -22,3 +22,25 @@ HAVING COUNT(*) > 3;
 SELECT poste, AVG(valeur_marchande) AS moyenne_valeur
 FROM JOUEUR
 GROUP BY poste;
+
+-- compter le nombre de matchs par competition
+SELECT id_identifiant, COUNT(*) AS nb_matchs
+FROM PARTIE
+GROUP BY id_identifiant;
+
+-- compter le nombre de joueurs par nationalite
+SELECT nationalite, COUNT(*) AS nb_joueurs
+FROM JOUEUR
+GROUP BY nationalite;
+
+-- compter le nombre de joueurs par poste
+SELECT poste, COUNT(*) AS nb_joueurs
+FROM JOUEUR
+GROUP BY poste;
+
+
+-- afficher les equipes avec le nom du club
+SELECT e.id_equipe, e.categorie_niveau, c.nom_club
+FROM EQUIPE e
+JOIN CLUB c ON e.id_club = c.id_club;
+
