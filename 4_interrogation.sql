@@ -62,7 +62,7 @@ SELECT j.nom_joueur, c.statut_contrat, c.date_fin_contrat
 FROM JOUEUR j
 JOIN CONTRAT c ON j.id_joueur = c.id_joueur;
 
--- afficher les joueurs qui ont participe a un match
+-- afficher les joueurs qui ont joué un match (santé physique du joueur)
 SELECT j.nom_joueur, cp.id_match, cp.statut_joueur_match
 FROM COMPOSE cp
 JOIN JOUEUR j ON cp.id_joueur = j.id_joueur;
