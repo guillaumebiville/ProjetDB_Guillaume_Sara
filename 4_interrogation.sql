@@ -2,6 +2,12 @@
 SELECT nom_joueur, poste
 FROM JOUEUR;
 
+
+-- requete pour afficher les joueurs dont la valeur marchande est comprise entre 10000000 et 50000000
+SELECT nom_joueur, valeur_marchande
+FROM JOUEUR
+WHERE valeur_marchande BETWEEN 10000000 AND 50000000;
+
 -- requete pour afficher les joueurs français triés par nom
 SELECT nom_joueur, nationalite
 FROM JOUEUR
